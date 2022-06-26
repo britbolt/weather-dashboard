@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <meta http-quiv="X-UA-Comaptible" content="ie-edge">
+        <title>Weather Dashboard</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <p>Weather Dashboard</p>
+        </header>
+<article>
+    <div class="mb-3">
+        <label for="citySearch" class="form-label">Search for a city:</label>
+        <input type="text" class="form-control" id="citySearchInput" placeholder="Enter Name of City">
+        <button type="submit" class="btn btn-primary" id="citySearch-btn">Search</button>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-secondary" id="citySearch-common">{{common-city}}</button>
+        <button type="submit" class="btn btn-secondary" id="citySearch-common">{{common-city}}</button>
+        <button type="submit" class="btn btn-secondary" id="citySearch-common">{{common-city}}</button>
+        <button type="submit" class="btn btn-secondary" id="citySearch-common">{{common-city}}</button>
+        <button type="submit" class="btn btn-secondary" id="citySearch-common">{{common-city}}</button>
+        <button type="submit" class="btn btn-secondary" id="citySearch-common">{{common-city}}</button>
+    </div>
+</article>
+
+<div class="results-today">
+    <p class="city date"></p>
+    <p class="temp">Temp:</p>
+    <p class="wind">Wind:</p>
+    <p class="humid">Humidity</p>
+    <p class="uv">UV Index:</p>
+</div>
+
+<div class="card" style="width: 18rem">
+    <div class="card-body">
+        <h5 class="card-title">{{date-next}}</h5>
+        <img src="" class="weather-icon" alt="put icon here">
+        <p class="card-text">Temp:</p>
+        <p class="card-text">Wind:</p>
+        <p class="card-text">Humidity:</p>
+    </div>  
+</div>
+
+        <script src="./assets/js/main.js"></script>
+
+    </body>
+</html>
