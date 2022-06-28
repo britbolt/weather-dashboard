@@ -5,18 +5,25 @@
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <meta http-quiv="X-UA-Comaptible" content="ie-edge">
         <title>Weather Dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./assets/css/style.css">
 
     </head>
+
+
+
     <body>
         <header>
             <p>Weather Dashboard</p>
         </header>
+
+
+
 <article>
     <div class="mb-3">
         <label for="citySearch" class="form-label">Search for a city:</label>
-        <input type="text" class="form-control" id="citySearchInput" placeholder="Enter Name of City">
-        <button type="submit" class="btn btn-primary" id="citySearch-btn">Search</button>
+        <input type="text" class="form-control" id="citySearch" placeholder="Enter Name of City">
+        <button type="submit" class="btn btn-primary" id="searchButton">Search</button>
     </div>
     <div>
         <button type="submit" class="btn btn-secondary" id="citySearch-common">{{common-city}}</button>
@@ -28,23 +35,69 @@
     </div>
 </article>
 
-<div class="results-today">
-    <p class="city date"></p>
-    <p class="temp">Temp:</p>
-    <p class="wind">Wind:</p>
-    <p class="humid">Humidity</p>
-    <p class="uv">UV Index:</p>
+<div class="results-today" id="results-today">
+    <h2 class="current-city" id="current-city"></h2>
+    <p class="city-date" id="date-time"></p>
+    <p class="currentTemp" id="currentTemp">Temp:</p>
+    <p class="currentWind" id="currentWind">Wind:</p>
+    <p class="currentHumidity" id="currentHumidity">Humidity</p>
+    <p class="currentUV" id="currentUV">UV Index:</p>
+</div>
+
+<!-- cards to display 5-day weather forcast -->
+<div class="card" style="width: 18rem">
+    <div class="card-body">
+        <h5 class="card-title" id="forecast-Date0"></h5>
+        <p id="forecast-Img0"></p>
+        <p class="card-text" id="forecast-Temp0">Temp:</p>
+        <p class="card-text" id="forecast-Wind0">Wind:</p>
+        <p class="card-text" id="forecast-Humidity0">Humidity:</p>
+    </div>  
 </div>
 
 <div class="card" style="width: 18rem">
     <div class="card-body">
-        <h5 class="card-title">{{date-next}}</h5>
-        <img src="" class="weather-icon" alt="put icon here">
-        <p class="card-text">Temp:</p>
-        <p class="card-text">Wind:</p>
-        <p class="card-text">Humidity:</p>
+        <h5 class="card-title" id="forecast-Date1"></h5>
+        <p id="forecast-Img1"></p>
+        <p class="card-text" id="forecast-Temp1">Temp:</p>
+        <p class="card-text" id="fWind">Wind:</p>
+        <p class="card-text" id="forecast-Humidity1">Humidity:</p>
     </div>  
 </div>
+
+<div class="card" style="width: 18rem">
+    <div class="card-body">
+        <h5 class="card-title" id="forecast-Date2"></h5>
+        <p id="forecast-Img2"></p>
+        <p class="card-text" id="forecast-Temp2">Temp:</p>
+        <p class="card-text" id="fWind">Wind:</p>
+        <p class="card-text" id="forecast-Humidity2">Humidity:</p>
+    </div>  
+</div>
+
+<div class="card" style="width: 18rem">
+    <div class="card-body">
+        <h5 class="card-title" id="forecast-Date3"></h5>
+        <p id="forecast-Img3"></p>
+        <p class="card-text" id="forecast-Temp3">Temp:</p>
+        <p class="card-text" id="fWind">Wind:</p>
+        <p class="card-text" id="forecast-Humidity3">Humidity:</p>
+    </div>  
+</div>
+
+<div class="card" style="width: 18rem">
+    <div class="card-body">
+        <h5 class="card-title" id="forecast-Date4"></h5>
+        <p id="forecast-Img4"></p>
+        <p class="card-text" id="forecast-Temp4">Temp:</p>
+        <p class="card-text" id="fWind">Wind:</p>
+        <p class="card-text" id="forecast-Humidity4">Humidity:</p>
+    </div>  
+</div>
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 
         <script src="./assets/js/main.js"></script>
 
