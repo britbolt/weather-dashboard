@@ -10,18 +10,16 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     </head>
-
-
-
     <body>
         <header class="bg-primary">
-            <p>Weather Dashboard</p>
+            <p class="fs-1">Weather Dashboard</p>
         </header>
 
-
-
-<article>
+<div class="container">
+    <div class="row">
+<article class="col border bg-secondary border-primary">
     <div class="mb-3">
+        <!-- searchbar and search history list buttons -->
         <label for="citySearch" class="form-label">Search for a city:</label>
         <input type="text" class="form-control" id="citySearch" placeholder="Enter Name of City">
         <button type="submit" class="btn btn-primary" id="searchButton">Search</button>
@@ -33,18 +31,24 @@
     </div>
 </article>
 
-<div class="results-today" id="results-today">
+<!-- section displaying current weather conditions -->
+<div class="col border border-primary bg-secondary results-today" id="results-today">
     <h2 class="current-city" id="current-city"></h2>
     <p class="weather-icon" id="weather-Img"></p>
     <p class="city-date" id="date-time"></p>
     <p class="currentTemp" id="currentTemp">Temp:</p>
     <p class="currentWind" id="currentWind">Wind:</p>
     <p class="currentHumidity" id="currentHumidity">Humidity</p>
-    <p class="currentUV" id="currentUV">UV Index:</p>
+</div>
+</div>
 </div>
 
 <!-- cards to display 5-day weather forcast -->
-<div class="card border text-light bg-dark mb-3" style="width: 18rem">
+<div class="container">
+    <div class="row">
+
+  
+<div class="col card border text-light bg-dark mb-3" style="width: 18rem">
     <div class="card-body">
         <h5 class="card-title" id="forecast-Date0"></h5>
         <p id="forecast-Img0"></p>
@@ -54,46 +58,47 @@
     </div>  
 </div>
 
-<div class="card border text-light bg-dark mb-3" style="width: 18rem">
+<div class="col card border text-light bg-dark mb-3" style="width: 18rem">
     <div class="card-body">
         <h5 class="card-title" id="forecast-Date1"></h5>
         <p id="forecast-Img1"></p>
         <p class="card-text" id="forecast-Temp1">Temp:</p>
-        <p class="card-text" id="fWind">Wind:</p>
+        <p class="card-text" id="forecast-Wind1">Wind:</p>
         <p class="card-text" id="forecast-Humidity1">Humidity:</p>
     </div>  
 </div>
 
-<div class="card border text-light bg-dark mb-3" style="width: 18rem;">
+<div class="col card border text-light bg-dark mb-3" style="width: 18rem;">
    <h5 class="card-header" id="forecast-Date2"></h5> 
    <div class="card-body">
         <p id="forecast-Img2"></p>
         <p class="card-text" id="forecast-Temp2">Temp:</p>
-        <p class="card-text" id="fWind">Wind:</p>
+        <p class="card-text" id="forecast-Wind2">Wind:</p>
         <p class="card-text" id="forecast-Humidity2">Humidity:</p>
     </div>  
 </div>
 
-<div class="card border text-light bg-dark mb-3" style="width: 18rem">
+<div class="col card border text-light bg-dark mb-3" style="width: 18rem">
     <div class="card-body">
         <h5 class="card-title" id="forecast-Date3"></h5>
         <p id="forecast-Img3"></p>
         <p class="card-text" id="forecast-Temp3">Temp:</p>
-        <p class="card-text" id="fWind">Wind:</p>
+        <p class="card-text" id="forecast-Wind3">Wind:</p>
         <p class="card-text" id="forecast-Humidity3">Humidity:</p>
     </div>  
 </div>
 
-<div class="card border text-light bg-dark mb-3" style="width: 18rem">
+<div class="col card border text-light bg-dark mb-3" style="width: 18rem">
     <div class="card-body">
         <h5 class="card-title" id="forecast-Date4"></h5>
         <p id="forecast-Img4"></p>
         <p class="card-text" id="forecast-Temp4">Temp:</p>
-        <p class="card-text" id="fWind">Wind:</p>
+        <p class="card-text" id="forecast-Wind4">Wind:</p>
         <p class="card-text" id="forecast-Humidity4">Humidity:</p>
     </div>  
 </div>
-
+</div>
+</div>
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="./assets/js/main.js"></script>

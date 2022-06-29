@@ -41,7 +41,7 @@ function weatherSearch(city) {
         url:new_url.href,
         method:"GET",
     }).then(function(response){
-        // console.log(response);
+        console.log(response);
         //display weather icon after name and date
         const weatherIcon = response.weather[0].icon;
         // const iconSize = "@2x.png"
@@ -53,12 +53,13 @@ function weatherSearch(city) {
         (currentCity).html(response.name+"("+date+")");
         
         //display current temp
-        (currentTemp).html(response.main.temp + " deg F");
+        (currentTemp).html("Temp: " +response.main.temp + " deg F");
         //display current wind speed
-        (currentWind).html(response.wind.speed + " MPH");
+        (currentWind).html("Wind: " +response.wind.speed + " MPH");
         //display current humidity
-        (currentHumidity).html(response.main.humidity + "%");
+        (currentHumidity).html("Humidity: " +response.main.humidity + "%");
         // console.log(response.name); 
+       
         forecast(city);
     }) 
 };
@@ -78,7 +79,7 @@ function forecast(city) {
         url:forecastURL,
         method:"GET"
     }).then (function(response){
-        // console.log(response);
+        console.log(response);
         
         for (i=0; i<5; i++){
             const date = new Date((response.list[((i+1)*8)-1].dt)*1000).toLocaleDateString();
@@ -91,12 +92,14 @@ function forecast(city) {
             // console.log(iconurl);
 
 
-            var temp= response.list[((i+1)*8)-1].main.temp;
-            var humidity= response.list[((i+1)*8)-1].main.humidity;
+            const temp= response.list[((i+1)*8)-1].main.temp;
+            const humidity= response.list[((i+1)*8)-1].main.humidity;
+            const wind = response.list[((i+1)*8)-1].wind.speed;
         
             $("#forecast-Date"+i).html(date);
             $("#forecast-Img"+i).html("<img src="+ iconurl +">");
             $("#forecast-Temp"+i).html("Temp: " + temp+"&#8457");
+            $("#forecast-Wind"+i).html("Wind: " +wind+"MPH");
             $("#forecast-Humidity"+i).html("Humidity: "+ humidity+"%");
         }
         
